@@ -1,0 +1,525 @@
+<title>Breakwater | Less chasing. More surfing.</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17343d;
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
+
+header, .hero, footer {
+  background: #092b36;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #b9f3db;
+  text-decoration: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 45px 0 80px;
+}
+
+.hero-grid {
+  display: grid;
+  gap: 35px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: #b9f3db;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(44px, 8vw, 76px);
+  line-height: 1.05;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: clamp(30px, 5vw, 44px);
+  line-height: 1.2;
+}
+
+.hero p {
+  color: #d1e6e5;
+  font-size: 18px;
+}
+
+.hero img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.button {
+  display: inline-block;
+  background: #b9f3db;
+  color: #092b36;
+  padding: 15px 24px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button.dark {
+  background: #092b36;
+  color: white;
+}
+
+section {
+  padding: 70px 0;
+}
+
+.muted {
+  color: #62777d;
+}
+
+.stats, .steps {
+  display: grid;
+  gap: 18px;
+}
+
+.stat, .step {
+  background: #f3f8f6;
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  font-size: 36px;
+  color: #087f80;
+}
+
+.quote {
+  background: #e9f8f1;
+  padding: 24px;
+  border-left: 5px solid #69cda8;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.how {
+  background: #f4f8f7;
+}
+
+.step {
+  background: white;
+  border: 1px solid #dce8e4;
+}
+
+.number {
+  display: inline-block;
+  background: #d9f4e9;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.price-section {
+  text-align: center;
+  background: #f4f8f7;
+}
+
+.price-card {
+  background: white;
+  max-width: 460px;
+  margin: 25px auto;
+  padding: 35px;
+  border-radius: 18px;
+  border: 1px solid #dce8e4;
+}
+
+.price {
+  font-size: 65px;
+  font-weight: bold;
+}
+
+.waitlist {
+  background: #b9f3db;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 650px;
+}
+
+input {
+  padding: 15px;
+  border: 1px solid #83b5a2;
+  border-radius: 9px;
+  font-size: 16px;
+}
+
+#thanks {
+  display: none;
+  padding: 18px;
+  background: white;
+  border-radius: 10px;
+  max-width: 650px;
+}
+
+footer {
+  padding: 30px 0;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: #b9f3db;
+  font-weight: bold;
+}
+
+@media (min-width: 760px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero img {
+    height: 460px;
+  }
+
+  .stats, .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  form {
+    flex-direction: row;
+  }
+
+  form input {
+    flex: 1;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="container">
+    <a class="logo" href="index.html">
+      ≈ breakwater.
+    </a>
+
+    <a href="#how-it-works">How it works</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="container hero-grid">
+
+      <div>
+        <div class="eyebrow">
+          Built for independent Irish surf schools
+        </div>
+
+        <h1>Less chasing.<br>More surfing.</h1>
+
+        <p>
+          When the weather cancels your lessons,
+          Breakwater helps you organise rebookings,
+          see who is still waiting and keep track
+          of the income at risk.
+        </p>
+
+        <a
+          class="button"
+          href="https://normabryan.github.io/Demo/"
+          target="_blank"
+          rel="noopener noreferrer">
+          Try the Live Demo →
+        </a>
+
+        <p style="font-size:13px;margin-top:18px;">
+          Student prototype · No account required
+        </p>
+      </div>
+
+      <img
+        src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1200&q=85"
+        alt="Surfer riding a wave">
+    </div>
+  </div>
+
+  <!-- THE PROBLEM -->
+  <section>
+    <div class="container">
+
+      <div class="eyebrow" style="color:#087f80;">
+        The problem
+      </div>
+
+      <h2>The weather changes.<br>
+      Your whole day changes.</h2>
+
+      <p class="muted">
+        A cancelled surf lesson is not just a cancelled
+        lesson. It means calls, messages, finding
+        available places and trying not to lose bookings.
+      </p>
+
+      <div class="stats">
+
+        <div class="stat">
+          <strong>1 in 4</strong>
+          Days affected by weather cancellations
+          in the case
+        </div>
+
+        <div class="stat">
+          <strong>3 hours</strong>
+          Spent manually rearranging customers
+          on a cancelled day
+        </div>
+
+        <div class="stat">
+          <strong>1 in 5</strong>
+          Cancelled bookings never rebook
+          in the case
+        </div>
+
+      </div>
+
+      <div class="quote">
+        "When the weather changes, I have to contact
+        everyone and try to find another lesson.
+        It takes hours."
+
+        <p>
+          <small>
+            Illustrative customer statement,
+            not a real customer interview.
+          </small>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how-it-works">
+    <div class="container">
+
+      <div class="eyebrow" style="color:#087f80;">
+        Simple by design
+      </div>
+
+      <h2>From cancellation to rebooking<br>
+      in three steps.</h2>
+
+      <div class="steps">
+
+        <div class="step">
+          <span class="number">01</span>
+          <h3>Cancel the lesson</h3>
+          <p>
+            Select the session affected by the weather.
+            Customers move into your rebooking queue.
+          </p>
+        </div>
+
+        <div class="step">
+          <span class="number">02</span>
+          <h3>Find another slot</h3>
+          <p>
+            Choose another suitable lesson and
+            organise customers into available places.
+          </p>
+        </div>
+
+        <div class="step">
+          <span class="number">03</span>
+          <h3>See what's at risk</h3>
+          <p>
+            Check who is still waiting and the
+            potential booking income at risk.
+          </p>
+        </div>
+
+      </div>
+
+      <p style="margin-top:30px;">
+        <a
+          class="button dark"
+          href="https://normabryan.github.io/Demo/"
+          target="_blank"
+          rel="noopener noreferrer">
+          Explore the Working Prototype →
+        </a>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- PRICE -->
+  <section class="price-section">
+    <div class="container">
+
+      <h2>Simple pricing for small schools.</h2>
+
+      <p>
+        A proposed price for the student project.
+      </p>
+
+      <div class="price-card">
+
+        <div class="eyebrow" style="color:#087f80;">
+          Breakwater
+        </div>
+
+        <div class="price">
+          €49<span style="font-size:17px;">/month</span>
+        </div>
+
+        <p>Plus €99 one-off setup</p>
+
+        <p>
+          Organise cancellations, manage
+          rebookings and track income at risk.
+        </p>
+
+        <a class="button dark" href="#waiting-list">
+          Join the Waiting List →
+        </a>
+
+        <p class="muted" style="font-size:12px;">
+          Illustrative pricing only.
+          Not a live commercial offer.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITING LIST -->
+  <section class="waitlist" id="waiting-list">
+    <div class="container">
+
+      <h2>Spend less time chasing bookings.</h2>
+
+      <p>
+        Interested in a simpler way to manage
+        weather cancellations?
+      </p>
+
+      <form id="waitlist-form">
+
+        <input
+          type="email"
+          id="email"
+          placeholder="Your email address"
+          aria-label="Your email address"
+          required>
+
+        <button class="button dark" type="submit">
+          Join the Waiting List →
+        </button>
+
+      </form>
+
+      <div id="thanks" role="status">
+        Thank you for your interest in Breakwater!
+        This is a student demonstration, so no
+        information has been submitted or stored.
+      </div>
+
+      <p style="font-size:12px;">
+        Demo form only. No information is collected,
+        saved or sent.
+      </p>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER WITH NOTES LINK -->
+<footer>
+  <div class="container footer-flex">
+
+    <a class="logo" href="index.html">
+      ≈ breakwater.
+    </a>
+
+    <a href="notes.html">
+      Behind the Build →
+    </a>
+
+  </div>
+
+  <div class="container">
+    <p style="font-size:12px;">
+      Technology in Business · Case F ·
+      Atlantic Edge Surf School
+    </p>
+  </div>
+</footer>
+
+<script>
+const form = document.getElementById("waitlist-form");
+const thanks = document.getElementById("thanks");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  form.style.display = "none";
+  thanks.style.display = "block";
+});
+</script>
+
+</body>
+</html>
